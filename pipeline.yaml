@@ -14,7 +14,7 @@ spec:
           workspace: myworkspace
       params:
         - name: url
-          value: {YOUR_GIT_REPOSITORY_URL}
+          value: https://github.com/bjrijal/tekton-pipeline.git
         - name: deleteExisting
           value: "true"
     - name: build
@@ -24,7 +24,7 @@ spec:
         - fetch-repository
       params:
         - name: IMAGE
-          value: docker.io/{YOUR_DOCKERHUB_REPOSITORY_NAME}
+          value: docker.io/bijayarijal/get-started
         - name: IMAGE_PUSH_SECRET_NAME
           value: image-push-secrets
       workspaces:
