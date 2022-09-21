@@ -27,7 +27,7 @@ spec:
         - name: varlibcontainers
           mountPath: /var/lib/containers
       securityContext:
-        privileged: true
+        runAsUser: 0
     - name: push
       image: quay.io/buildah/stable:v1.17.0
       workingDir: $(workspaces.source.path)
@@ -38,7 +38,7 @@ spec:
         - name: varlibcontainers
           mountPath: /var/lib/containers
       securityContext:
-        privileged: true
+        runAsUser: 0
       env:
         - name: USERNAME
           valueFrom:
