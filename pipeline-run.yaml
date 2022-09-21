@@ -14,3 +14,4 @@ spec:
           resources:
             requests:
               storage: 50Mi
+          storageClassName: ocs-storagecluster-ceph-rbd
